@@ -58,10 +58,10 @@ export default function Dashboard() {
   const topSkills = skills?.skills?.slice(0, 5) || [];
 
   const statCards = [
-    { label: 'Skills Mapped', value: stats?.skills || 0, icon: HiChartBar, color: 'text-blue-400 bg-blue-500/20' },
-    { label: 'Career Paths', value: stats?.career_paths || 0, icon: HiMap, color: 'text-teal-400 bg-teal-500/20' },
-    { label: 'Roadmaps', value: stats?.roadmaps || 0, icon: HiBookOpen, color: 'text-purple-400 bg-purple-500/20' },
-    { label: 'Progress', value: `${stats?.learning_progress || 0}%`, icon: HiTrendingUp, color: 'text-emerald-400 bg-emerald-500/20' },
+    { label: 'Skills Mapped', value: stats?.skills || 0, icon: HiChartBar, color: 'text-blue-400 bg-blue-500/20', to: '/assess' },
+    { label: 'Career Paths', value: stats?.career_paths || 0, icon: HiMap, color: 'text-teal-400 bg-teal-500/20', to: '/explore' },
+    { label: 'Roadmaps', value: stats?.roadmaps || 0, icon: HiBookOpen, color: 'text-purple-400 bg-purple-500/20', to: '/explore' },
+    { label: 'Progress', value: `${stats?.learning_progress || 0}%`, icon: HiTrendingUp, color: 'text-emerald-400 bg-emerald-500/20', to: '/resources' },
   ];
 
   const quickActions = [
@@ -106,15 +106,16 @@ export default function Dashboard() {
       {/* Stats Row */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
         {statCards.map((s) => (
-          <div key={s.label} className="card !py-4 !px-5 flex items-center gap-3">
-            <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${s.color}`}>
+          <Link key={s.label} to={s.to} className="card !py-4 !px-5 flex items-center gap-3 group hover:-translate-y-1 hover:ring-2 hover:ring-teal-400/30 transition-all duration-300 cursor-pointer">
+            <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${s.color} group-hover:scale-110 transition-transform duration-300`}>
               <s.icon className="w-5 h-5" />
             </div>
-            <div>
+            <div className="flex-1">
               <p className="text-2xl font-bold text-white">{s.value}</p>
-              <p className="text-xs text-gray-400">{s.label}</p>
+              <p className="text-xs text-gray-400 group-hover:text-teal-400 transition-colors">{s.label}</p>
             </div>
-          </div>
+            <HiArrowRight className="w-4 h-4 text-gray-500 opacity-0 group-hover:opacity-100 group-hover:text-teal-400 transition-all duration-300" />
+          </Link>
         ))}
       </div>
 
@@ -152,10 +153,11 @@ export default function Dashboard() {
         </div>
         <div className="card">
           <div className="flex items-center justify-between mb-5">
-            <h2 className="text-lg font-bold text-white flex items-center gap-2">
+            <Link to="/settings" className="text-lg font-bold text-white flex items-center gap-2 hover:text-teal-400 transition-colors group">
               <HiClock className="w-5 h-5 text-teal-500" />
               Recent Activity
-            </h2>
+              <HiArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all" />
+            </Link>
           </div>
           {activity.length > 0 ? (
             <div className="space-y-3">
@@ -187,20 +189,21 @@ export default function Dashboard() {
         {/* Skill Summary */}
         <div className="card">
           <div className="flex items-center justify-between mb-5">
-            <h2 className="text-lg font-bold text-white flex items-center gap-2">
+            <Link to="/assess" className="text-lg font-bold text-white flex items-center gap-2 hover:text-teal-400 transition-colors group">
               <HiChartBar className="w-5 h-5 text-teal-500" />
               Skill Profile
-            </h2>
+              <HiArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all" />
+            </Link>
             {hasSkills && (
-              <span className="text-sm text-gray-400">{skills.count} skills</span>
+              <Link to="/assess" className="text-sm text-gray-400 hover:text-teal-400 transition-colors">{skills.count} skills</Link>
             )}
           </div>
           {hasSkills ? (
             <div className="space-y-4">
               {topSkills.map((skill, i) => (
-                <div key={i}>
+                <Link key={i} to="/assess" className="block group hover:bg-white/5 rounded-lg p-2 -mx-2 transition-colors">
                   <div className="flex items-center justify-between mb-1">
-                    <span className="text-sm font-medium text-gray-300">{skill.skill_name}</span>
+                    <span className="text-sm font-medium text-gray-300 group-hover:text-teal-300 transition-colors">{skill.skill_name}</span>
                     <span className="text-sm text-gray-400">{skill.proficiency}%</span>
                   </div>
                   <div className="w-full bg-white/10 rounded-full h-2.5">
@@ -209,7 +212,7 @@ export default function Dashboard() {
                       style={{ width: `${skill.proficiency}%` }}
                     />
                   </div>
-                </div>
+                </Link>
               ))}
               {skills.count > 5 && (
                 <Link to="/assess" className="text-sm text-teal-400 font-medium hover:text-teal-300">
@@ -231,10 +234,11 @@ export default function Dashboard() {
         {/* Career Paths */}
         <div className="card">
           <div className="flex items-center justify-between mb-5">
-            <h2 className="text-lg font-bold text-white flex items-center gap-2">
+            <Link to="/explore" className="text-lg font-bold text-white flex items-center gap-2 hover:text-teal-400 transition-colors group">
               <HiMap className="w-5 h-5 text-teal-500" />
               Career Paths
-            </h2>
+              <HiArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all" />
+            </Link>
             {paths.length > 0 && (
               <Link to="/explore" className="text-sm text-teal-400 font-medium hover:text-teal-300">
                 Explore all →
@@ -244,22 +248,20 @@ export default function Dashboard() {
           {paths.length > 0 ? (
             <div className="space-y-3">
               {paths.slice(0, 4).map((path, i) => (
-                <div key={i} className="flex items-center gap-4 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
+                <Link key={i} to="/explore" className="flex items-center gap-4 p-3 rounded-lg bg-white/5 hover:bg-white/10 hover:ring-1 hover:ring-teal-400/20 transition-all cursor-pointer group">
                   <div className={`w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-sm ${
                     path.feasibility_score >= 75 ? 'bg-emerald-500' : path.feasibility_score >= 50 ? 'bg-amber-500' : 'bg-gray-400'
                   }`}>
                     {path.feasibility_score}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <p className="text-sm font-semibold text-white truncate">{path.target_role}</p>
+                    <p className="text-sm font-semibold text-white truncate group-hover:text-teal-300 transition-colors">{path.target_role}</p>
                     <p className="text-xs text-gray-400">
                       ${(path.median_salary / 1000).toFixed(0)}k · {path.growth_rate}% growth
                     </p>
                   </div>
-                  <Link to="/explore" className="text-teal-400 hover:text-teal-300 p-1">
-                    <HiArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
+                  <HiArrowRight className="w-4 h-4 text-teal-400 group-hover:translate-x-1 transition-transform" />
+                </Link>
               ))}
             </div>
           ) : (
