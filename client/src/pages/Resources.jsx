@@ -110,16 +110,20 @@ export default function Resources() {
               <p className="text-sm text-gray-400 mb-4">{section.description}</p>
               <div className="space-y-2">
                 {section.items.map((item, idx) => (
-                  <div
+                  <a
                     key={idx}
-                    className="flex items-center gap-3 p-2.5 rounded-lg bg-white/5 hover:bg-white/10 transition-colors group cursor-pointer"
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 p-2.5 rounded-lg bg-white/5 hover:bg-white/10 hover:ring-1 hover:ring-teal-400/20 transition-all group cursor-pointer"
                   >
-                    <HiChevronRight className="w-4 h-4 text-gray-400 group-hover:text-teal-500 transition-colors flex-shrink-0" />
-                    <span className="text-sm text-gray-300 flex-1">{item.title}</span>
+                    <HiChevronRight className="w-4 h-4 text-gray-400 group-hover:text-teal-500 group-hover:translate-x-0.5 transition-all flex-shrink-0" />
+                    <span className="text-sm text-gray-300 group-hover:text-teal-300 transition-colors flex-1">{item.title}</span>
                     <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${typeColors[item.type] || 'bg-white/10 text-gray-400'}`}>
                       {item.type}
                     </span>
-                  </div>
+                    <HiGlobe className="w-4 h-4 text-gray-500 opacity-0 group-hover:opacity-100 group-hover:text-teal-400 transition-all flex-shrink-0" />
+                  </a>
                 ))}
               </div>
             </div>

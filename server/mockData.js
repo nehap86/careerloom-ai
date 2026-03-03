@@ -307,33 +307,33 @@ function mockJobListings(userSkills, targetRole) {
 
   const allJobs = [
     // Product Manager roles
-    { id: 'pm-1', title: 'Associate Product Manager', company: 'TechFlow Inc.', location: 'San Francisco, CA (Hybrid)', salary_min: 110000, salary_max: 140000, type: 'Full-time', experience: '2-4 years', role_category: 'Product Manager', required_skills: ['Product Roadmapping', 'Data Analysis', 'Communication', 'Agile/Scrum', 'User Research'], posted_days_ago: 2, description: 'Join our growing team to drive product strategy for our SaaS platform. Work with cross-functional teams to deliver features that delight users.' },
-    { id: 'pm-2', title: 'Senior Product Manager', company: 'DataBridge AI', location: 'New York, NY (Remote)', salary_min: 150000, salary_max: 185000, type: 'Full-time', experience: '5-8 years', role_category: 'Product Manager', required_skills: ['Strategic Planning', 'Leadership', 'Data Analysis', 'Stakeholder Management', 'Market Analysis'], posted_days_ago: 5, description: 'Lead product vision and strategy for our AI-powered analytics suite. Drive cross-team alignment and deliver world-class data products.' },
-    { id: 'pm-3', title: 'Product Manager - Growth', company: 'Nextera Health', location: 'Austin, TX (Hybrid)', salary_min: 125000, salary_max: 155000, type: 'Full-time', experience: '3-5 years', role_category: 'Product Manager', required_skills: ['A/B Testing', 'Data Analysis', 'Communication', 'SEO/SEM', 'Strategic Planning'], posted_days_ago: 1, description: 'Own growth product initiatives, experiment with user acquisition funnels, and optimize conversion across our health-tech platform.' },
+    { id: 'pm-1', title: 'Associate Product Manager', company: 'TechFlow Inc.', location: 'San Francisco, CA (Hybrid)', salary_min: 110000, salary_max: 140000, type: 'Full-time', experience: '2-4 years', role_category: 'Product Manager', required_skills: ['Product Roadmapping', 'Data Analysis', 'Communication', 'Agile/Scrum', 'User Research'], posted_days_ago: 2, description: 'Join our growing team to drive product strategy for our SaaS platform. Work with cross-functional teams to deliver features that delight users.', apply_url: 'https://www.linkedin.com/jobs/' },
+    { id: 'pm-2', title: 'Senior Product Manager', company: 'DataBridge AI', location: 'New York, NY (Remote)', salary_min: 150000, salary_max: 185000, type: 'Full-time', experience: '5-8 years', role_category: 'Product Manager', required_skills: ['Strategic Planning', 'Leadership', 'Data Analysis', 'Stakeholder Management', 'Market Analysis'], posted_days_ago: 5, description: 'Lead product vision and strategy for our AI-powered analytics suite. Drive cross-team alignment and deliver world-class data products.', apply_url: 'https://www.indeed.com/' },
+    { id: 'pm-3', title: 'Product Manager - Growth', company: 'Nextera Health', location: 'Austin, TX (Hybrid)', salary_min: 125000, salary_max: 155000, type: 'Full-time', experience: '3-5 years', role_category: 'Product Manager', required_skills: ['A/B Testing', 'Data Analysis', 'Communication', 'SEO/SEM', 'Strategic Planning'], posted_days_ago: 1, description: 'Own growth product initiatives, experiment with user acquisition funnels, and optimize conversion across our health-tech platform.', apply_url: 'https://www.glassdoor.com/Job/' },
 
     // Data Analyst roles
-    { id: 'da-1', title: 'Data Analyst', company: 'Meridian Financial', location: 'Chicago, IL (On-site)', salary_min: 85000, salary_max: 105000, type: 'Full-time', experience: '1-3 years', role_category: 'Data Analyst', required_skills: ['SQL & Databases', 'Data Analysis', 'Python Programming', 'Presentation Skills', 'Critical Thinking'], posted_days_ago: 3, description: 'Analyze financial datasets to uncover trends, build dashboards, and present insights to senior leadership.' },
-    { id: 'da-2', title: 'Senior Data Analyst', company: 'CloudPeak Systems', location: 'Seattle, WA (Remote)', salary_min: 115000, salary_max: 140000, type: 'Full-time', experience: '4-6 years', role_category: 'Data Analyst', required_skills: ['SQL & Databases', 'Python Programming', 'Machine Learning', 'Data Analysis', 'A/B Testing'], posted_days_ago: 7, description: 'Drive data-informed decision-making across the organization. Build predictive models and lead analytics projects end-to-end.' },
-    { id: 'da-3', title: 'Business Intelligence Analyst', company: 'RetailEdge Co.', location: 'Denver, CO (Hybrid)', salary_min: 90000, salary_max: 115000, type: 'Full-time', experience: '2-4 years', role_category: 'Data Analyst', required_skills: ['SQL & Databases', 'Data Analysis', 'Presentation Skills', 'Problem Solving', 'Financial Analysis'], posted_days_ago: 4, description: 'Create and maintain BI dashboards, analyze retail performance metrics, and provide actionable recommendations to stakeholders.' },
+    { id: 'da-1', title: 'Data Analyst', company: 'Meridian Financial', location: 'Chicago, IL (On-site)', salary_min: 85000, salary_max: 105000, type: 'Full-time', experience: '1-3 years', role_category: 'Data Analyst', required_skills: ['SQL & Databases', 'Data Analysis', 'Python Programming', 'Presentation Skills', 'Critical Thinking'], posted_days_ago: 3, description: 'Analyze financial datasets to uncover trends, build dashboards, and present insights to senior leadership.', apply_url: 'https://www.linkedin.com/jobs/' },
+    { id: 'da-2', title: 'Senior Data Analyst', company: 'CloudPeak Systems', location: 'Seattle, WA (Remote)', salary_min: 115000, salary_max: 140000, type: 'Full-time', experience: '4-6 years', role_category: 'Data Analyst', required_skills: ['SQL & Databases', 'Python Programming', 'Machine Learning', 'Data Analysis', 'A/B Testing'], posted_days_ago: 7, description: 'Drive data-informed decision-making across the organization. Build predictive models and lead analytics projects end-to-end.', apply_url: 'https://www.indeed.com/' },
+    { id: 'da-3', title: 'Business Intelligence Analyst', company: 'RetailEdge Co.', location: 'Denver, CO (Hybrid)', salary_min: 90000, salary_max: 115000, type: 'Full-time', experience: '2-4 years', role_category: 'Data Analyst', required_skills: ['SQL & Databases', 'Data Analysis', 'Presentation Skills', 'Problem Solving', 'Financial Analysis'], posted_days_ago: 4, description: 'Create and maintain BI dashboards, analyze retail performance metrics, and provide actionable recommendations to stakeholders.', apply_url: 'https://www.glassdoor.com/Job/' },
 
     // UX Designer roles
-    { id: 'ux-1', title: 'UX Designer', company: 'PixelCraft Studio', location: 'Los Angeles, CA (Hybrid)', salary_min: 95000, salary_max: 120000, type: 'Full-time', experience: '2-4 years', role_category: 'UX Designer', required_skills: ['User Research', 'Visual Design', 'Figma / Design Tools', 'Communication', 'Problem Solving'], posted_days_ago: 6, description: 'Design intuitive user experiences for our creative collaboration platform. Conduct user research and iterate on designs based on feedback.' },
-    { id: 'ux-2', title: 'Senior UX/UI Designer', company: 'HealthFirst Digital', location: 'Boston, MA (Remote)', salary_min: 120000, salary_max: 150000, type: 'Full-time', experience: '5-7 years', role_category: 'UX Designer', required_skills: ['User Research', 'Visual Design', 'Figma / Design Tools', 'A/B Testing', 'Leadership'], posted_days_ago: 3, description: 'Lead design for our patient-facing health platform. Mentor junior designers and establish design system standards.' },
+    { id: 'ux-1', title: 'UX Designer', company: 'PixelCraft Studio', location: 'Los Angeles, CA (Hybrid)', salary_min: 95000, salary_max: 120000, type: 'Full-time', experience: '2-4 years', role_category: 'UX Designer', required_skills: ['User Research', 'Visual Design', 'Figma / Design Tools', 'Communication', 'Problem Solving'], posted_days_ago: 6, description: 'Design intuitive user experiences for our creative collaboration platform. Conduct user research and iterate on designs based on feedback.', apply_url: 'https://www.linkedin.com/jobs/' },
+    { id: 'ux-2', title: 'Senior UX/UI Designer', company: 'HealthFirst Digital', location: 'Boston, MA (Remote)', salary_min: 120000, salary_max: 150000, type: 'Full-time', experience: '5-7 years', role_category: 'UX Designer', required_skills: ['User Research', 'Visual Design', 'Figma / Design Tools', 'A/B Testing', 'Leadership'], posted_days_ago: 3, description: 'Lead design for our patient-facing health platform. Mentor junior designers and establish design system standards.', apply_url: 'https://www.indeed.com/' },
 
     // Software Developer roles
-    { id: 'sd-1', title: 'Full-Stack Developer', company: 'BuildStack Technologies', location: 'Remote (US)', salary_min: 120000, salary_max: 155000, type: 'Full-time', experience: '3-5 years', role_category: 'Software Developer', required_skills: ['JavaScript', 'Python Programming', 'SQL & Databases', 'API Development', 'Cloud Computing (AWS/GCP)'], posted_days_ago: 1, description: 'Build and scale our developer tools platform. Work across the stack with React, Node.js, and PostgreSQL.' },
-    { id: 'sd-2', title: 'Backend Engineer', company: 'PayStream Inc.', location: 'New York, NY (Hybrid)', salary_min: 140000, salary_max: 175000, type: 'Full-time', experience: '4-7 years', role_category: 'Software Developer', required_skills: ['Python Programming', 'SQL & Databases', 'API Development', 'Cloud Computing (AWS/GCP)', 'Problem Solving'], posted_days_ago: 8, description: 'Design and build scalable backend services for our payment processing infrastructure. Focus on reliability and performance.' },
+    { id: 'sd-1', title: 'Full-Stack Developer', company: 'BuildStack Technologies', location: 'Remote (US)', salary_min: 120000, salary_max: 155000, type: 'Full-time', experience: '3-5 years', role_category: 'Software Developer', required_skills: ['JavaScript', 'Python Programming', 'SQL & Databases', 'API Development', 'Cloud Computing (AWS/GCP)'], posted_days_ago: 1, description: 'Build and scale our developer tools platform. Work across the stack with React, Node.js, and PostgreSQL.', apply_url: 'https://www.linkedin.com/jobs/' },
+    { id: 'sd-2', title: 'Backend Engineer', company: 'PayStream Inc.', location: 'New York, NY (Hybrid)', salary_min: 140000, salary_max: 175000, type: 'Full-time', experience: '4-7 years', role_category: 'Software Developer', required_skills: ['Python Programming', 'SQL & Databases', 'API Development', 'Cloud Computing (AWS/GCP)', 'Problem Solving'], posted_days_ago: 8, description: 'Design and build scalable backend services for our payment processing infrastructure. Focus on reliability and performance.', apply_url: 'https://www.glassdoor.com/Job/' },
 
     // Marketing Manager roles
-    { id: 'mm-1', title: 'Digital Marketing Manager', company: 'GrowthLab Agency', location: 'Miami, FL (Hybrid)', salary_min: 100000, salary_max: 130000, type: 'Full-time', experience: '4-6 years', role_category: 'Marketing Manager', required_skills: ['Digital Marketing', 'SEO/SEM', 'Content Strategy', 'Data Analysis', 'A/B Testing'], posted_days_ago: 2, description: 'Lead multi-channel marketing campaigns for Fortune 500 clients. Analyze performance data and optimize for maximum ROI.' },
-    { id: 'mm-2', title: 'Marketing Director', company: 'Evergreen Brands', location: 'Portland, OR (On-site)', salary_min: 135000, salary_max: 165000, type: 'Full-time', experience: '7-10 years', role_category: 'Marketing Manager', required_skills: ['Strategic Planning', 'Leadership', 'Digital Marketing', 'Communication', 'Content Strategy'], posted_days_ago: 10, description: 'Set the strategic direction for brand marketing across all channels. Build and lead a team of marketing professionals.' },
+    { id: 'mm-1', title: 'Digital Marketing Manager', company: 'GrowthLab Agency', location: 'Miami, FL (Hybrid)', salary_min: 100000, salary_max: 130000, type: 'Full-time', experience: '4-6 years', role_category: 'Marketing Manager', required_skills: ['Digital Marketing', 'SEO/SEM', 'Content Strategy', 'Data Analysis', 'A/B Testing'], posted_days_ago: 2, description: 'Lead multi-channel marketing campaigns for Fortune 500 clients. Analyze performance data and optimize for maximum ROI.', apply_url: 'https://www.indeed.com/' },
+    { id: 'mm-2', title: 'Marketing Director', company: 'Evergreen Brands', location: 'Portland, OR (On-site)', salary_min: 135000, salary_max: 165000, type: 'Full-time', experience: '7-10 years', role_category: 'Marketing Manager', required_skills: ['Strategic Planning', 'Leadership', 'Digital Marketing', 'Communication', 'Content Strategy'], posted_days_ago: 10, description: 'Set the strategic direction for brand marketing across all channels. Build and lead a team of marketing professionals.', apply_url: 'https://www.linkedin.com/jobs/' },
 
     // DevOps Engineer roles
-    { id: 'de-1', title: 'DevOps Engineer', company: 'InfraScale Solutions', location: 'Remote (US)', salary_min: 125000, salary_max: 160000, type: 'Full-time', experience: '3-5 years', role_category: 'DevOps Engineer', required_skills: ['Cloud Computing (AWS/GCP)', 'Python Programming', 'API Development', 'Problem Solving', 'Agile/Scrum'], posted_days_ago: 4, description: 'Build and maintain CI/CD pipelines, manage cloud infrastructure, and improve developer experience across the engineering org.' },
+    { id: 'de-1', title: 'DevOps Engineer', company: 'InfraScale Solutions', location: 'Remote (US)', salary_min: 125000, salary_max: 160000, type: 'Full-time', experience: '3-5 years', role_category: 'DevOps Engineer', required_skills: ['Cloud Computing (AWS/GCP)', 'Python Programming', 'API Development', 'Problem Solving', 'Agile/Scrum'], posted_days_ago: 4, description: 'Build and maintain CI/CD pipelines, manage cloud infrastructure, and improve developer experience across the engineering org.', apply_url: 'https://www.glassdoor.com/Job/' },
 
     // Business Analyst roles
-    { id: 'ba-1', title: 'Business Analyst', company: 'ConsultPro Group', location: 'Washington, DC (Hybrid)', salary_min: 80000, salary_max: 105000, type: 'Full-time', experience: '2-4 years', role_category: 'Business Analyst', required_skills: ['Data Analysis', 'Communication', 'Problem Solving', 'SQL & Databases', 'Presentation Skills'], posted_days_ago: 5, description: 'Gather and document business requirements, facilitate stakeholder workshops, and drive process improvement initiatives.' },
-    { id: 'ba-2', title: 'Senior Business Analyst', company: 'Vanguard Consulting', location: 'Atlanta, GA (Remote)', salary_min: 100000, salary_max: 130000, type: 'Full-time', experience: '5-8 years', role_category: 'Business Analyst', required_skills: ['Stakeholder Management', 'Data Analysis', 'Critical Thinking', 'Communication', 'Strategic Planning'], posted_days_ago: 6, description: 'Lead complex business analysis engagements, define solution architectures, and mentor junior analysts.' },
+    { id: 'ba-1', title: 'Business Analyst', company: 'ConsultPro Group', location: 'Washington, DC (Hybrid)', salary_min: 80000, salary_max: 105000, type: 'Full-time', experience: '2-4 years', role_category: 'Business Analyst', required_skills: ['Data Analysis', 'Communication', 'Problem Solving', 'SQL & Databases', 'Presentation Skills'], posted_days_ago: 5, description: 'Gather and document business requirements, facilitate stakeholder workshops, and drive process improvement initiatives.', apply_url: 'https://www.indeed.com/' },
+    { id: 'ba-2', title: 'Senior Business Analyst', company: 'Vanguard Consulting', location: 'Atlanta, GA (Remote)', salary_min: 100000, salary_max: 130000, type: 'Full-time', experience: '5-8 years', role_category: 'Business Analyst', required_skills: ['Stakeholder Management', 'Data Analysis', 'Critical Thinking', 'Communication', 'Strategic Planning'], posted_days_ago: 6, description: 'Lead complex business analysis engagements, define solution architectures, and mentor junior analysts.', apply_url: 'https://www.linkedin.com/jobs/' },
   ];
 
   // Filter by target role if provided, otherwise show all
@@ -365,10 +365,10 @@ const RESOURCES = {
       title: 'Resume Optimization',
       description: 'Tailor your resume to highlight transferable skills for your target role.',
       items: [
-        { title: 'Action Verb Cheat Sheet', type: 'guide', url: '#' },
-        { title: 'Resume Template for Career Changers', type: 'template', url: '#' },
-        { title: 'Portfolio Building Guide', type: 'guide', url: '#' },
-        { title: 'LinkedIn Profile Optimization', type: 'checklist', url: '#' },
+        { title: 'Action Verb Cheat Sheet', type: 'guide', url: 'https://hbr.org/2023/01/how-to-write-a-strong-resume' },
+        { title: 'Resume Template for Career Changers', type: 'template', url: 'https://www.canva.com/resumes/templates/' },
+        { title: 'Portfolio Building Guide', type: 'guide', url: 'https://www.freecodecamp.org/news/how-to-build-a-developer-portfolio-website/' },
+        { title: 'LinkedIn Profile Optimization', type: 'checklist', url: 'https://www.linkedin.com/pulse/how-optimize-your-linkedin-profile/' },
       ],
     },
     {
@@ -377,10 +377,10 @@ const RESOURCES = {
       title: 'Interview Preparation',
       description: 'Practice common questions and build confidence for your target role interviews.',
       items: [
-        { title: 'STAR Method Response Framework', type: 'guide', url: '#' },
-        { title: 'Behavioral Interview Questions Bank', type: 'practice', url: '#' },
-        { title: 'Technical Interview Prep Checklist', type: 'checklist', url: '#' },
-        { title: 'Salary Negotiation Scripts', type: 'template', url: '#' },
+        { title: 'STAR Method Response Framework', type: 'guide', url: 'https://www.themuse.com/advice/star-interview-method' },
+        { title: 'Behavioral Interview Questions Bank', type: 'practice', url: 'https://www.indeed.com/career-advice/interviewing/most-common-behavioral-interview-questions-and-answers' },
+        { title: 'Technical Interview Prep Checklist', type: 'checklist', url: 'https://leetcode.com/explore/' },
+        { title: 'Salary Negotiation Scripts', type: 'template', url: 'https://www.levels.fyi/' },
       ],
     },
     {
@@ -389,10 +389,10 @@ const RESOURCES = {
       title: 'Building Your Network',
       description: 'Connect with professionals in your target field to accelerate your transition.',
       items: [
-        { title: 'Cold Outreach Message Templates', type: 'template', url: '#' },
-        { title: 'Informational Interview Guide', type: 'guide', url: '#' },
-        { title: 'Industry Event Finder', type: 'tool', url: '#' },
-        { title: 'Professional Community Directory', type: 'directory', url: '#' },
+        { title: 'Cold Outreach Message Templates', type: 'template', url: 'https://www.themuse.com/advice/networking-email-templates' },
+        { title: 'Informational Interview Guide', type: 'guide', url: 'https://hbr.org/2022/01/how-to-get-the-most-out-of-an-informational-interview' },
+        { title: 'Industry Event Finder', type: 'tool', url: 'https://www.meetup.com/' },
+        { title: 'Professional Community Directory', type: 'directory', url: 'https://www.linkedin.com/groups/' },
       ],
     },
   ],
@@ -403,10 +403,10 @@ const RESOURCES = {
       title: 'Onboarding Success',
       description: 'Make a strong start in your new role with a structured 30-60-90 day plan.',
       items: [
-        { title: '30-60-90 Day Plan Template', type: 'template', url: '#' },
-        { title: 'Questions to Ask Your Manager', type: 'checklist', url: '#' },
-        { title: 'Building Credibility in a New Role', type: 'guide', url: '#' },
-        { title: 'New Role Transition Journal', type: 'template', url: '#' },
+        { title: '30-60-90 Day Plan Template', type: 'template', url: 'https://www.smartsheet.com/30-60-90-day-plan' },
+        { title: 'Questions to Ask Your Manager', type: 'checklist', url: 'https://www.themuse.com/advice/questions-to-ask-your-new-boss' },
+        { title: 'Building Credibility in a New Role', type: 'guide', url: 'https://hbr.org/2021/12/starting-a-new-job-take-charge-of-your-onboarding' },
+        { title: 'New Role Transition Journal', type: 'template', url: 'https://www.notion.so/templates/collections/journals' },
       ],
     },
     {
@@ -415,10 +415,10 @@ const RESOURCES = {
       title: 'Continued Development',
       description: 'Keep growing in your new career with ongoing learning and mentorship.',
       items: [
-        { title: 'Skill Gap Tracker Spreadsheet', type: 'template', url: '#' },
-        { title: 'Finding a Mentor Guide', type: 'guide', url: '#' },
-        { title: 'Conference & Workshop Calendar', type: 'directory', url: '#' },
-        { title: 'Professional Certification Roadmap', type: 'guide', url: '#' },
+        { title: 'Skill Gap Tracker Spreadsheet', type: 'template', url: 'https://docs.google.com/spreadsheets/u/0/?tgif=d' },
+        { title: 'Finding a Mentor Guide', type: 'guide', url: 'https://www.themuse.com/advice/how-to-find-a-mentor' },
+        { title: 'Conference & Workshop Calendar', type: 'directory', url: 'https://www.eventbrite.com/d/online/professional-development/' },
+        { title: 'Professional Certification Roadmap', type: 'guide', url: 'https://www.coursera.org/professional-certificates' },
       ],
     },
     {
@@ -427,10 +427,10 @@ const RESOURCES = {
       title: 'Stay Connected',
       description: 'Join communities of fellow career changers for ongoing support and advice.',
       items: [
-        { title: 'Career Changers Slack Communities', type: 'directory', url: '#' },
-        { title: 'Industry-Specific Subreddits', type: 'directory', url: '#' },
-        { title: 'Peer Mentoring Program', type: 'program', url: '#' },
-        { title: 'Success Stories & Case Studies', type: 'inspiration', url: '#' },
+        { title: 'Career Changers Slack Communities', type: 'directory', url: 'https://www.careerkarma.com/discussions/' },
+        { title: 'Industry-Specific Subreddits', type: 'directory', url: 'https://www.reddit.com/r/careerguidance/' },
+        { title: 'Peer Mentoring Program', type: 'program', url: 'https://www.adplist.org/' },
+        { title: 'Success Stories & Case Studies', type: 'inspiration', url: 'https://www.themuse.com/advice/career-change-success-stories' },
       ],
     },
   ],
