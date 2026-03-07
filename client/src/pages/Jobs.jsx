@@ -191,28 +191,28 @@ export default function Jobs() {
                   ))}
                 </div>
 
+                {/* Apply & Save row - always visible */}
+                <div className="flex items-center justify-between mt-4">
+                  <div className="flex items-center gap-3">
+                    <MatchBadge score={job.match_score} />
+                    <span className="text-xs text-gray-400">{job.type}</span>
+                  </div>
+                  <a
+                    href={job.apply_url || 'https://www.linkedin.com/jobs/'}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="inline-flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-teal-500 to-emerald-600 text-white text-sm font-semibold rounded-lg hover:from-teal-400 hover:to-emerald-500 transition-all shadow-lg hover:shadow-teal-500/25 hover:-translate-y-0.5"
+                  >
+                    <HiExternalLink className="w-4 h-4" />
+                    Apply Now
+                  </a>
+                </div>
+
                 {/* Expanded details */}
                 {expandedJob === job.id && (
                   <div className="mt-4 pt-4 border-t border-white/10">
                     <p className="text-gray-400 text-sm leading-relaxed">{job.description}</p>
-                    <div className="mt-4 flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <MatchBadge score={job.match_score} />
-                        <span className="text-xs text-gray-400">{job.type}</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <a
-                          href={job.apply_url || 'https://www.linkedin.com/jobs/'}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={(e) => e.stopPropagation()}
-                          className="inline-flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-teal-500 to-emerald-600 text-white text-sm font-semibold rounded-lg hover:from-teal-400 hover:to-emerald-500 transition-all shadow-lg hover:shadow-teal-500/25 hover:-translate-y-0.5"
-                        >
-                          <HiExternalLink className="w-4 h-4" />
-                          Apply Now
-                        </a>
-                      </div>
-                    </div>
                   </div>
                 )}
               </div>
